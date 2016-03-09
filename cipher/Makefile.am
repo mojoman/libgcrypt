@@ -26,10 +26,10 @@ AM_CFLAGS = $(GPG_ERROR_CFLAGS)
 
 AM_CCASFLAGS = $(NOEXECSTACK_FLAGS)
 
-EXTRA_DIST = gost-s-box.c
+EXTRA_DIST = gost-s-box.c gost2-s-box.c
 
-CLEANFILES = gost-s-box
-DISTCLEANFILES = gost-sb.h
+CLEANFILES = gost-s-box gost2-s-box
+DISTCLEANFILES = gost-sb.h gost2-sb.h
 
 noinst_LTLIBRARIES = libcipher.la
 
@@ -73,6 +73,7 @@ ecc.c ecc-curves.c ecc-misc.c ecc-common.h \
 ecc-ecdsa.c ecc-eddsa.c ecc-gost.c \
 idea.c \
 gost28147.c gost.h \
+gost2.c gost2.h \
 gostr3411-94.c \
 md4.c \
 md5.c \
@@ -105,6 +106,13 @@ gost-sb.h: gost-s-box
 
 gost-s-box: gost-s-box.c
 	$(CC_FOR_BUILD) -o $@ $(srcdir)/gost-s-box.c
+
+gost2.lo: gost2-sb.h
+gost2-sb.h: gost2-s-box
+	./gost2-s-box $@
+
+gost2-s-box: gost2-s-box.c
+	$(CC_FOR_BUILD) -o $@ $(srcdir)/gost2-s-box.c
 
 
 if ENABLE_O_FLAG_MUNGING

@@ -1960,6 +1960,12 @@ if test "$found" = "1" ; then
    AC_DEFINE(USE_GOST28147, 1, [Defined if this module should be included])
 fi
 
+LIST_MEMBER(gost2, $enabled_ciphers)
+if test "$found" = "1" ; then
+   GCRYPT_CIPHERS="$GCRYPT_CIPHERS gost2.lo"
+   AC_DEFINE(USE_GOST2, 1, [Defined if this module should be included])
+fi
+
 LIST_MEMBER(chacha20, $enabled_ciphers)
 if test "$found" = "1" ; then
    GCRYPT_CIPHERS="$GCRYPT_CIPHERS chacha20.lo"
