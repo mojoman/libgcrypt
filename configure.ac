@@ -189,7 +189,7 @@ LIBGCRYPT_CONFIG_HOST="$host"
 
 # Definitions for symmetric ciphers.
 available_ciphers="arcfour blowfish cast5 des aes twofish serpent rfc2268 seed"
-available_ciphers="$available_ciphers camellia idea salsa20 gost28147 chacha20"
+available_ciphers="$available_ciphers camellia idea salsa20 gost2 gost28147 chacha20"
 enabled_ciphers=""
 
 # Definitions for public-key ciphers.

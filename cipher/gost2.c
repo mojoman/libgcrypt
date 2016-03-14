@@ -41,7 +41,7 @@ gost2_setkey (void *c, const byte *key, unsigned keylen)
     return GPG_ERR_INV_KEYLEN;
 
   if (!ctx->sbox)
-    ctx->sbox = sbox_test_3411;
+    ctx->sbox = sbox_test;
 
   for (i = 0; i < 8; i++)
     {

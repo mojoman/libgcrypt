@@ -272,6 +272,7 @@ extern gcry_cipher_spec_t _gcry_cipher_spec_idea;
 extern gcry_cipher_spec_t _gcry_cipher_spec_salsa20;
 extern gcry_cipher_spec_t _gcry_cipher_spec_salsa20r12;
 extern gcry_cipher_spec_t _gcry_cipher_spec_gost28147;
+extern gcry_cipher_spec_t _gcry_cipher_spec_gost2;
 extern gcry_cipher_spec_t _gcry_cipher_spec_chacha20;
 
 /* Declarations for the digest specifications.  */

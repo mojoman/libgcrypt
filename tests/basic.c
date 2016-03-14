@@ -5170,6 +5170,9 @@ check_ciphers (void)
 #if USE_GOST28147
     GCRY_CIPHER_GOST28147,
 #endif
+#if USE_GOST2
+    GCRY_CIPHER_GOST2,
+#endif
     0
   };
   static const int algos2[] = {

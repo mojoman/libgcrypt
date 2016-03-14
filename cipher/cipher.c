@@ -84,7 +84,7 @@ static gcry_cipher_spec_t *cipher_list[] =
 #if USE_GOST28147
      &_gcry_cipher_spec_gost28147,
 #endif
-#ifdef USE_GOST2
+#if USE_GOST2
      &_gcry_cipher_spec_gost2,
 #endif
 #if USE_CHACHA20
@@ -94,8 +94,6 @@ static gcry_cipher_spec_t *cipher_list[] =
   };
 
 
-
-
 static int
 map_algo (int algo)
 {
