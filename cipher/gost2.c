@@ -19,7 +19,7 @@
 
 /* 2GOST is a modified version of GOST 28147-89 cipher,
  * as proposed by Dmukh, Dygin, Marshalko [2014].
- * 
+ *
  */
 
 #include <config.h>
